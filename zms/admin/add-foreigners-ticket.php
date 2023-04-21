@@ -16,11 +16,11 @@ if(isset($_POST['submit']))
         $query=mysqli_query($con, "insert into  tblticforeigner(TicketID,NoAdult,NoChildren,AdultUnitprice,ChildUnitprice) value('$ticketid','$noadult','$nochildren','$aprice','$cprice')");
     if ($query) {
     
-     echo '<script>alert("Ticket information has been added.")</script>';
+     echo '<script>alert("Thông tin vé đã được thêm vào.")</script>';
   }
   else
     {
-       echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+       echo '<script>alert("Đã xảy ra sự cố. Vui lòng thử lại.")</script>';
     }
 
   
@@ -35,7 +35,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Foreigner Ticket - Park Ticket Management System</title>
+    <title>Thêm vé người nước ngoài - Hệ thống quản lý vé sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -79,17 +79,17 @@ if(isset($_POST['submit']))
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Add Ticket</h4>
+                                        <h4 class="header-title">Thêm vé</h4>
 
 
                                         <form method="post" action="" name="">
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Adult</label>
-                                                <input type="text" class="form-control" id="noadult" name="noadult" aria-describedby="emailHelp" placeholder="No. of Adult" value="" required="true">
+                                                <label for="exampleInputEmail1">Người lớn</label>
+                                                <input type="text" class="form-control" id="noadult" name="noadult" aria-describedby="emailHelp" placeholder="Số người lớn" value="" required="true">
                                             </div>
                                          <div class="form-group">
-                                                <label for="exampleInputEmail1">Children</label>
-                                                <input type="text" class="form-control" id="nochildren" name="nochildren" aria-describedby="emailHelp" placeholder="No. of Childrens" value="" required="true">
+                                                <label for="exampleInputEmail1">Trẻ em</label>
+                                                <input type="text" class="form-control" id="nochildren" name="nochildren" aria-describedby="emailHelp" placeholder="Số trẻ em" value="" required="true">
                                                 
                                             </div>
                                             <?php
@@ -112,7 +112,7 @@ while ($row=mysqli_fetch_array($ret)) {
                                             <input type="hidden" name="cprice" value="<?php  echo $row['Price'];?>">
                                           
                                       <?php } ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Submit</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Xác nhận</button>
                                         </form>
                                     </div>
                                 </div>

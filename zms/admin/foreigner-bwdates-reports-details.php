@@ -14,7 +14,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>View Between Dates Report - Zoo Management System</title>
+    <title>Xem báo cáo giữa các ngày - Hệ thống quản lý sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -60,21 +60,21 @@ if (strlen($_SESSION['zmsaid']==0)) {
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Between Dates Reports</h4>
+                                <h4 class="header-title">Báo cáo giữa các ngày</h4>
                                 <?php
 $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
 
 ?>
-<h5 align="center" style="color:blue">Between Dates Report  from <?php echo $fdate?> to <?php echo $tdate?> of Ticket Generating</h5>
+<h5 align="center" style="color:blue">Báo cáo giữa các ngày  <?php echo $fdate?> to <?php echo $tdate?> từ việc tạo vé</h5>
                                 <div class="data-tables">
                                    <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
-                                                <th>S.NO</th>
-                                                <th>Ticket ID</th>
-                                                <th>Generating Ticket Date</th>
-                                                <th>Action</th>
+                                                <th>S.no</th>
+                                                <th>ID vé</th>
+                                                <th>Ngày tạo vé</th>
+                                                <th>Hành động</th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -89,7 +89,7 @@ while ($row=mysqli_fetch_array($ret)) {
               
                   <td><?php  echo $row['TicketID'];?></td>
                   <td><?php  echo $row['PostingDate'];?></td>
-                  <td><a href="manage-foreigners-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
+                  <td><a href="manage-foreigners-ticket.php?viewid=<?php echo $row['ID'];?>">Xem</a>
                 </tr>
                 <?php 
 $cnt=$cnt+1;

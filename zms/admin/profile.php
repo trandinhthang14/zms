@@ -30,7 +30,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin Profile - Zoo Management System</title>
+    <title>Hồ sơ quản trị viên - Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -73,7 +73,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Admin Profile</h4>
+                                        <h4 class="header-title">Hồ sơ quản trị viên</h4>
 
    <?php
 $adminid=$_SESSION['zmsaid'];
@@ -85,33 +85,33 @@ while ($row=mysqli_fetch_array($ret)) {
                                         <form method="post" action="">
                                              <div class="form-group">
 
-                                                <label for="exampleInputEmail1">Admin Name</label>
-                                                <input type="text" class="form-control" id="adminname" name="adminname" aria-describedby="emailHelp" placeholder="Admin Name" value="<?php  echo $row['AdminName'];?>">
+                                                <label for="exampleInputEmail1">Tên quản trị viên</label>
+                                                <input type="text" class="form-control" id="adminname" name="adminname" aria-describedby="emailHelp" placeholder="Tên quản trị viên" value="<?php  echo $row['AdminName'];?>">
                                                 
                                             </div>
  <div class="form-group">
 
-                                                <label for="exampleInputEmail1">User Name</label>
+                                                <label for="exampleInputEmail1">Tên người dùng</label>
                                                 <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" readonly="true" value="<?php  echo $row['UserName'];?>">
                                                 
                                             </div>
                                             <div class="form-group">
 
-                                                <label for="exampleInputEmail1">Contact Number</label>
+                                                <label for="exampleInputEmail1">Số điện thoại liên lạc</label>
                                                 <input type="text" class="form-control" id="contactnumber" name="contactnumber" aria-describedby="emailHelp" readonly="true" value="<?php  echo $row['MobileNumber'];?>">
                                                 
                                             </div>
 
                                             <div class="form-group">
 
-                                                <label for="exampleInputEmail1">Email address</label>
+                                                <label for="exampleInputEmail1">Địa chỉ email</label>
                                                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" readonly="true" value="<?php  echo $row['Email'];?>">
-                                                <small id="emailHelp" class="form-text text-muted">We'll never share your
-                                                    email with anyone else.</small>
+                                                <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ  email của bạn
+                                                     cho bất kỳ ai khác.</small>
                                             </div>
                                          
                                             <?php }  ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Update</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Cập nhập</button>
                                         </form>
                                     </div>
                                 </div>

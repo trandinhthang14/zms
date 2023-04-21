@@ -16,7 +16,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>View Indian Ticket - Zoo Management System</title>
+    <title>Xem vé Việt Nam - Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -68,32 +68,32 @@ $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
 ?>
-                                        <h4 class="header-title" style="color: blue">View Detail of Ticket ID: <?php  echo $row['TicketID'];?></h4>
-                                        <h5 class="header-title" style="color: blue">Visiting Date: <?php  echo $row['PostingDate'];?></h5>
+                                        <h4 class="header-title" style="color: blue">Xem chi tiết ID vé: <?php  echo $row['TicketID'];?></h4>
+                                        <h5 class="header-title" style="color: blue">Ngày tham quan: <?php  echo $row['PostingDate'];?></h5>
 
 
                                         <table border="1" class="table table-striped table-bordered first" >
                                             <tr>
                                                 <th>#</th>
-                                                <th>No of Tickets</th>
-                                                <th>Price per unit</th>
-                                                <th>Total</th>
+                                                <th>Mã loại vé</th>
+                                                <th>Giá vé</th>
+                                                <th>Tổng tiền vé</th>
                                             </tr>
                                 <tr>
-                                    <th >Number of Adult </th>
+                                    <th >Số người lớm </th>
                                     <td style="padding-left: 10px"><?php  echo $noadult=$row['NoAdult'];?></td>
                                      <td style="padding-left: 10px">$<?php  echo $cup=$row['AdultUnitprice'];?></td>
                                      <td style="padding-left: 10px">$<?php  echo $ta=$cup*$noadult;?></td>
                                 </tr>
                                 <tr>
-                                    <th>Number of Chlidren </th>
+                                    <th>Số trẻ em </th>
                                     <td style="padding-left: 10px"><?php  echo $nochild=$row['NoChildren'];?></td>
                                     <td style="padding-left: 10px">$<?php  echo $aup=$row['ChildUnitprice'];?></td>
                                      <td style="padding-left: 10px">$<?php  echo $tc=$aup*$nochild;?></td>
                                 </tr>
      
                                  <tr>
-                                    <th style="text-align: center;color: red;font-size: 20px" colspan="3">Total Ticket Price</th>
+                                    <th style="text-align: center;color: red;font-size: 20px" colspan="3">Tổng tiền vé</th>
                                     <td style="padding-left: 10px;">$<?php  echo ($ta+$tc);?></td>
                                 </tr>
                                 </table>

@@ -24,7 +24,7 @@ if(isset($_POST['login']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login - Zoo Management System</title>
+    <title>Đăng nhập - Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -60,17 +60,17 @@ if(isset($_POST['login']))
                 <form action="#" method="post" name="login">
                   
                     <div class="login-form-head">
-                        <h4>Zoo Management System</h4>
-                        <p>Hello there, Sign in and start managing your Admin Template</p>
+                        <h4>Hệ thống quản lý vườn thú</h4>
+                        <p>Xin chào, Đăng nhập và bắt đầu quản lý Mẫu quản trị viên của bạn</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="exampleInputEmail1">User Name</label>
+                            <label for="exampleInputEmail1">Tên người dùng</label>
                             <input type="text" id="username" name="username" required="true">
                             <i class="ti-user"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Password</label>
+                            <label for="exampleInputPassword1">Mật khẩu</label>
                             <input type="password" id="password" name="password" required="true">
                             <i class="ti-lock"></i>
                         </div>
@@ -79,15 +79,15 @@ if(isset($_POST['login']))
                                 
                             </div>
                             <div class="col-6 text-right">
-                                <a href="forgot-password.php">Forgot Password?</a>
+                                <a href="forgot-password.php">Quên mật khẩu?</a>
                             </div>
                         </div>
                         <div class="submit-btn-area">
-                            <button id="form_submit" type="submit" name="login">Submit <i class="ti-arrow-right"></i></button>
+                            <button id="form_submit" type="submit" name="login">Xác nhận <i class="ti-arrow-right"></i></button>
                             
                         </div>
                         <div style="padding-top: 20px">
-                                <a href="../index.php">Back Home!!</a>
+                                <a href="../index.php">Trở về trang chủ!!</a>
                             </div>
                     </div>
 

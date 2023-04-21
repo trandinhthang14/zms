@@ -14,7 +14,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Manage Animals - Zoo Management System</title>
+    <title>Quản lý động vật - Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -60,16 +60,16 @@ if (strlen($_SESSION['zmsaid']==0)) {
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Manage Animals</h4>
+                                <h4 class="header-title">Quản lý động vật</h4>
                                 <div class="data-tables">
                 <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
-                                                <th>S.NO</th>
-                                                <th>Cage Number</th>
-                                                <th>Animal Name</th>
-                                                <th>Creation Date</th>
-                                                <th>Action</th>
+                                                <th>S.no</th>
+                                                <th>Mã động vật</th>
+                                                <th>Tên động vật</th>
+                                                <th>Ngày tạo</th>
+                                                <th>Hành động</th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -85,7 +85,7 @@ while ($row=mysqli_fetch_array($ret)) {
                   <td><?php  echo $row['CageNumber'];?></td>
                   <td><?php  echo $row['AnimalName'];?>(<?php  echo $row['Breed'];?>)</td>
                   <td><?php  echo $row['CreationDate'];?></td>
-                  <td><a href="edit-animal-details.php?editid=<?php echo $row['ID'];?>">Edit</a>
+                  <td><a href="edit-animal-details.php?editid=<?php echo $row['ID'];?>">Sửa</a>
                 </tr>
                 <?php 
 $cnt=$cnt+1;

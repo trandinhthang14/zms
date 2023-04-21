@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Zoo Management System | Home Page</title>
+<title>Hệ thống quản lý vườn thú | Trang chủ</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -20,7 +20,7 @@ include('includes/dbconnection.php');
 			
 		<div class="banner-header">
 			<div class="container">
-				<h2>about</h2>
+				<h2>Về</h2>
 			</div>
 			</div>
 	<!--about-->

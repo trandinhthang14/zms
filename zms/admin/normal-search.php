@@ -14,7 +14,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Search Indian Ticket - Zoo Management System</title>
+    <title>Tìm kiếm vé Việt Nam - Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -62,11 +62,11 @@ if (strlen($_SESSION['zmsaid']==0)) {
                             <div class="card-body">
                                 <form id="basic-form" method="post">
                                 <div class="form-group">
-                                    <label>Search by Ticket ID</label>
-                                    <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="Ticket ID"></div>
+                                    <label>Tìm kiếm theo ID vé</label>
+                                    <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="ID vé"></div>
                                 
                                 <br>
-                                <button type="submit" class="btn btn-primary" name="search" id="submit">Search</button>
+                                <button type="submit" class="btn btn-primary" name="search" id="submit">Tìm kiếm</button>
                             </form>  
                             <?php
 if(isset($_POST['search']))
@@ -74,15 +74,15 @@ if(isset($_POST['search']))
 
 $sdata=$_POST['searchdata'];
   ?>
-  <h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4>  
+  <h4 align="center">Kết quả "<?php echo $sdata;?>" khoá </h4>  
                                 <div class="data-tables">
                                   <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
                                                 <th>S.NO</th>
-                                                <th>Ticket ID</th>
-                                                <th>Generating Ticket Date</th>
-                                                <th>Action</th>
+                                                <th>ID vé</th>
+                                                <th>Ngày tạo vé</th>
+                                                <th>Hành động</th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -99,12 +99,12 @@ while ($row=mysqli_fetch_array($ret)) {
               
                   <td><?php  echo $row['TicketID'];?></td>
                   <td><?php  echo $row['PostingDate'];?></td>
-                  <td><a href="view-normal-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
+                  <td><a href="view-normal-ticket.php?viewid=<?php echo $row['ID'];?>">Xem</a>
                 </tr>
                  <?php 
 $cnt=$cnt+1;} } else { ?>
   <tr>
-    <td colspan="8"> No record found against this search</td>
+    <td colspan="8"> Không có hồ sơ nào được tìm thấy </td>
 
   </tr>
    

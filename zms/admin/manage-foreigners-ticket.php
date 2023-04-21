@@ -14,7 +14,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Manage Ticket - Zoo Management System</title>
+    <title>Quản lý vé người nước ngoài- Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -60,15 +60,15 @@ if (strlen($_SESSION['zmsaid']==0)) {
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">View Detail of Tickets</h4>
+                                <h4 class="header-title">Xem chi tiết vé</h4>
                                 <div class="data-tables">
                                     <table  class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
-                                                <th>#</th>
-                                                <th>Ticket ID</th>
-                                                <th>Ticket Date</th>
-                                                <th>Action</th>
+                                                <th>S.no</th>
+                                                <th>ID vé</th>
+                                                <th>Ngày tạo vé</th>
+                                                <th>Hành động</th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -82,7 +82,7 @@ while ($row=mysqli_fetch_array($ret)) {
             <td width="100"><?php echo $cnt;?></td>
                   <td><?php  echo $row['TicketID'];?></td>
                   <td ><?php  echo $row['PostingDate'];?></td>
-                  <td><a href="view-foreigner-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
+                  <td><a href="view-foreigner-ticket.php?viewid=<?php echo $row['ID'];?>">Xem</a>
                 </tr>
                 <?php 
 $cnt=$cnt+1;

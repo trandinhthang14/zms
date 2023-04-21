@@ -18,12 +18,12 @@ $pagedes=$_POST['pagedes'];
 
     if ($query) {
     
-    echo '<script>alert("Contact us has been updated.")</script>';
+    echo '<script>alert("Liên hệ với chúng tôi đã được cập nhật.")</script>';
   }
   else
     {
     
-       echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+       echo '<script>alert("Đã xảy ra sự cố. Vui lòng thử lại.")</script>';
     }
 
   
@@ -36,7 +36,7 @@ $pagedes=$_POST['pagedes'];
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>About Us- Zoo Management System</title>
+    <title>Về chúng tôi- Hệ thống quản lý sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -82,7 +82,7 @@ $pagedes=$_POST['pagedes'];
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Contact Us</h4>
+                                        <h4 class="header-title">Liên hệ với chúng tôi</h4>
 
 
                                         <form method="post" action="" name="">
@@ -92,25 +92,25 @@ $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 ?>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Page Title</label>
+                                                <label for="exampleInputEmail1">Tiêu đề trang</label>
                                                 <input type="text" class="form-control" name="pagetitle" value="<?php  echo $row['PageTitle'];?>" required='true'>
                                             </div>
                                          <div class="form-group">
-                                                <label for="exampleInputEmail1">Page Description</label>
+                                                <label for="exampleInputEmail1">Mô tả trang</label>
                                                  <textarea  name="pagedes" required='true' cols="165" rows="4"><?php  echo $row['PageDescription'];?></textarea>
                                                 
                                             </div>
                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email Address</label>
+                                                <label for="exampleInputEmail1">Địa chỉ email</label>
                                                  <input type="email" class="form-control" name="email" value="<?php  echo $row['Email'];?>" required='true'>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Mobile Number</label>
+                                                <label for="exampleInputEmail1">Số điện thoại di động</label>
                                                  <input type="text" class="form-control" name="mobnum" value="<?php  echo $row['MobileNumber'];?>" required='true' maxlength="10" pattern='[0-9]+'>                                       
                                             </div> 
 
                                       <?php } ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Update</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Cập nhập</button>
                                         </form>
                                     </div>
                                 </div>

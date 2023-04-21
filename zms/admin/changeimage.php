@@ -13,7 +13,7 @@ $extension = substr($aimg,strlen($aimg)-4,strlen($aimg));
 $allowed_extensions = array(".jpg","jpeg",".png",".gif");
 if(!in_array($extension,$allowed_extensions))
 {
-echo "<script>alert('Image has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+echo "<script>alert('Hình ảnh có định dạng không hợp lệ. Chỉ jpg / jpeg/ png /gif định dạng được phép');</script>";
 }
 else
 {
@@ -23,12 +23,12 @@ $aimg=md5($aimg).time().$extension;
     $query=mysqli_query($con, "update tblanimal set AnimalImage='$aimg' where ID='$aniid'");
     if ($query) {
   
-    echo '<script>alert("Animal image has been Updated.")</script>';
+    echo '<script>alert("Hình ảnh động vật đã được cập nhật.")</script>';
   }
   else
     {
       
-      echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+      echo '<script>alert("Đã xảy ra sự cố. Vui lòng thử lại.")</script>';
     }
 
   
@@ -42,7 +42,7 @@ $aimg=md5($aimg).time().$extension;
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Animal Detail - Zoo Management System</title>
+    <title>Thêm chi tiết động vật - Hệ thống quản lý sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -88,7 +88,7 @@ $aimg=md5($aimg).time().$extension;
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Update Animal Detail</h4>
+                                        <h4 class="header-title">Cập nhật chi tiết động vật</h4>
                                         <form method="post" enctype="multipart/form-data">
                                             <?php
  $aniid=$_GET['editid'];
@@ -98,23 +98,23 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Animal Name</label>
-                                                <input type="text" class="form-control" id="aname" name="aname" aria-describedby="emailHelp" placeholder="Enter animal Name" value="<?php  echo $row['AnimalName'];?>" readonly="true">
+                                                <label for="exampleInputEmail1">Tên động vật</label>
+                                                <input type="text" class="form-control" id="aname" name="aname" aria-describedby="emailHelp" placeholder="Nhập tên động vật" value="<?php  echo $row['AnimalName'];?>" readonly="true">
                                             </div>
                                        
                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Old Animal Image</label>
+                                                <label for="exampleInputEmail1">Hình ảnh động vật cũ</label>
                                                 <img src="images/<?php  echo $row['AnimalImage'];?>" width="100" height="100">
                                             </div>
                                           <div class="form-group">
-                                                <label for="exampleInputEmail1">New Animal Image</label>
+                                                <label for="exampleInputEmail1">Hình ảnh động vật mới</label>
                                                 <input type="file" class="form-control" id="image" name="image" aria-describedby="emailHelp" value="" required="true">
                                                 
                                             </div>
                                            
                                          
                                             <?php } ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Update</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Cập nhập</button>
                                         </form>
                                     </div>
                                 </div>

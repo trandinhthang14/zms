@@ -12,7 +12,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Zoo Management System || Dashboard</title>
+    <title>Hệ thống quản lý sở thú || Bảng điều khiển</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -61,7 +61,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 $result=mysqli_fetch_array($query);
 $count_today_visitors=$result['totaladult'];
  ?>  
-                                        <h3 class="header-title mb-0">Today Normal Adult Visitor</h3>
+                                        <h3 class="header-title mb-0">Hôm nay khách người lớn bình thường</h3>
                                        <p style="font-size: 20px;color: red"><?php echo $count_today_visitors?></p>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ $count_today_visitors=$result['totaladult'];
 $result=mysqli_fetch_array($query);
 $count_today_cvisitors=$result['totalchild'];
  ?>  
-                                        <h4 class="header-title mb-0">Today Normal Children Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm nay khách trẻ em bình thường</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_today_cvisitors?></p>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ $count_today_cvisitors=$result['totalchild'];
 $result=mysqli_fetch_array($query);
 $count_Yest_visitors=$result['totaladulty'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Normal Adult Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm qua khách người lớn bình thường</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_Yest_visitors?></p>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@ $count_Yest_visitors=$result['totaladulty'];
 $result=mysqli_fetch_array($query);
 $count_Yest_cvisitors=$result['totalchildy'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Normal Child Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm qua khách trẻ em bình thường</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_Yest_cvisitors?></p>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ $count_Yest_cvisitors=$result['totalchildy'];
 $result=mysqli_fetch_array($query);
 $count_today_visitors=$result['totaladult'];
  ?>  
-                                        <h3 class="header-title mb-0">Today Foreigner Adult Visitor</h3>
+                                        <h3 class="header-title mb-0">Hôm nay khách người lớn nước ngoài</h3>
                                        <p style="font-size: 20px;color: red"><?php echo $count_today_visitors?></p>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@ $count_today_visitors=$result['totaladult'];
 $result=mysqli_fetch_array($query);
 $count_today_cvisitors=$result['totalchild'];
  ?>  
-                                        <h4 class="header-title mb-0">Today Foreigner Children Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm nay khách trẻ em nước ngoài</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_today_cvisitors?></p>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ $count_today_cvisitors=$result['totalchild'];
 $result=mysqli_fetch_array($query);
 $count_Yest_visitors=$result['totaladulty'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Foreigner Adult Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm qua khách người lớn nước ngoài</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_Yest_visitors?></p>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@ $count_Yest_visitors=$result['totaladulty'];
 $result=mysqli_fetch_array($query);
 $count_Yest_cvisitors=$result['totalchildy'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Foreigner Child Visitor</h4>
+                                        <h4 class="header-title mb-0">Hôm qua khách trẻ em nước ngoài</h4>
                                         <p style="font-size: 20px;color: red"><?php echo $count_Yest_cvisitors?></p>
                                     </div>
                                 </div>

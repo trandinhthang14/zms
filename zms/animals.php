@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Zoo Management System | Animal Detail</title>
+<title>Hệ thống quản lý vườn thú | Chi tiết động vật</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -29,7 +29,7 @@ include('includes/dbconnection.php');
 <?php include_once('includes/header.php');?>
 		<div class="banner-header">
 			<div class="container">
-				<h2>Animal Detail</h2>
+				<h2>Chi tiết động vật</h2>
 			</div>
 			</div>
 	<div class="content">
@@ -66,14 +66,14 @@ $total_pages = ceil($total_rows / $no_of_records_per_page);
 			</div>
 	<div align="center">
     <ul class="pagination" >
-        <li><a href="?pageno=1"><strong>First></strong></a></li>
+        <li><a href="?pageno=1"><strong>Đầu></strong></a></li>
         <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><strong style="padding-left: 10px">Prev></strong></a>
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><strong style="padding-left: 10px">Trước></strong></a>
         </li>
         <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><strong style="padding-left: 10px">Next></strong></a>
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><strong style="padding-left: 10px">Tiếp></strong></a>
         </li>
-        <li><a href="?pageno=<?php echo $total_pages; ?>"><strong style="padding-left: 10px">Last</strong></a></li>
+        <li><a href="?pageno=<?php echo $total_pages; ?>"><strong style="padding-left: 10px">Cuối</strong></a></li>
     </ul>
 </div>
 		</div>

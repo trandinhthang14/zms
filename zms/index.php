@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Zoo Management System | Home Page</title>
+<title>Hệ thống quản lý vườn thú | Trang chủ</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -20,8 +20,8 @@ include('includes/dbconnection.php');
 			<div class="header-banner">
 				<div class="container">
 					<div class="head-banner">
-						<h3>Visit to a Zoo</h3>
-						<p> A visit to a zoo offers us an opportunity to see the wild animals.Zoo is a place where we can see different animals and birds at one place. It has great attraction particularly for the children. A visit to a zoo gives us both information and entertainment. We come to learn about the rare species.</p>
+						<h3>Tham quan sở thú</h3>
+						<p> Một chuyến viếng thăm một sở thú cung cấp cho chúng ta một cơ hội để nhìn thấy động vật hoang dã. Sở thú là nơi chúng ta có thể nhìn thấy các loài động vật và chim khác nhau ở một nơi. Nó có sức hấp dẫn lớn đặc biệt là đối với trẻ em. Một chuyến viếng thăm sở thú cho chúng ta cả thông tin và giải trí. Chúng tôi đến để tìm hiểu về các loài quý hiếm.</p>
 					</div>
 					<div class="banner-grids">
 						<div class="col-md-6 banner-grid">
@@ -41,7 +41,7 @@ include('includes/dbconnection.php');
 			<div class="content">
 				<div class="welcome">
 					<div class="container">
-						<h2>welcome to zoo planet</h2>
+						<h2>Chào mừng bạn đến với vườn thú</h2>
 							<div class="welcome-grids">
 								
 								<?php 
@@ -65,7 +65,7 @@ include('includes/dbconnection.php');
 				<!--animals-->
 					<div class="animals">
 						<div class="container">
-							<h3>animals</h3>
+							<h3>Động vật</h3>
 							<div class="clients">
 								<ul id="flexiselDemo3">
 									<?php 

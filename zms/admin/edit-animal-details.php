@@ -14,12 +14,12 @@ if(isset($_POST['submit']))
     $query=mysqli_query($con, "update tblanimal set AnimalName='$aname',Breed='$breed', Description='$desc' where ID='$aniid'");
     if ($query) {
   
-    echo '<script>alert("Animal detail has been Updated.")</script>';
+    echo '<script>alert("Chi tiết động vật đã được cập nhật.")</script>';
   }
   else
     {
       
-      echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+      echo '<script>alert("Đã xảy ra sự cố. Vui lòng thử lại.")</script>';
     }
 
   
@@ -33,7 +33,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Animal Detail - Zoo Management System</title>
+    <title>Thêm chi tiết động vật - Hệ thống quản lý sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -79,7 +79,7 @@ if(isset($_POST['submit']))
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Update Animal Detail</h4>
+                                        <h4 class="header-title">Cập nhật chi tiết động vật</h4>
                                         <form method="post" enctype="multipart/form-data">
                                             <?php
  $aniid=$_GET['editid'];
@@ -89,32 +89,32 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Animal Name</label>
-                                                <input type="text" class="form-control" id="aname" name="aname" aria-describedby="emailHelp" placeholder="Enter animal Name" value="<?php  echo $row['AnimalName'];?>" required="true">
+                                                <label for="exampleInputEmail1">Tên động vật</label>
+                                                <input type="text" class="form-control" id="aname" name="aname" aria-describedby="emailHelp" placeholder="Nhập tên động vật" value="<?php  echo $row['AnimalName'];?>" required="true">
                                             </div>
                                        
                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Animal Image</label>
-                                                <img src="images/<?php  echo $row['AnimalImage'];?>" width="100" height="100"> <a href="changeimage.php?editid=<?php echo $row['ID'];?>"> &nbsp; Edit Image</a>
+                                                <label for="exampleInputEmail1">Hình ảnh động vật</label>
+                                                <img src="images/<?php  echo $row['AnimalImage'];?>" width="100" height="100"> <a href="changeimage.php?editid=<?php echo $row['ID'];?>"> &nbsp; Chỉnh sửa hình ảnh</a>
                                             </div>
                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Cage Number</label>
-                                                <input type="text" class="form-control" id="cnum" name="cnum" aria-describedby="emailHelp" placeholder="Enter cage number" value="<?php  echo $row['CageNumber'];?>" readonly="true" maxlength="5">
+                                                <label for="exampleInputEmail1"> Mã động vật</label>
+                                                <input type="text" class="form-control" id="cnum" name="cnum" aria-describedby="emailHelp" placeholder="Nhập mã động vật" value="<?php  echo $row['CageNumber'];?>" readonly="true" maxlength="5">
                                             </div> 
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Feed Number</label>
-                                                <input type="text" class="form-control" id="fnum" name="fnum" aria-describedby="emailHelp" placeholder="Enter feed number" value="<?php  echo $row['FeedNumber'];?>" readonly="true" maxlength="6">
+                                                <label for="exampleInputEmail1">Mã thức ăn</label>
+                                                <input type="text" class="form-control" id="fnum" name="fnum" aria-describedby="emailHelp" placeholder="Nhập mã thức ăn" value="<?php  echo $row['FeedNumber'];?>" readonly="true" maxlength="6">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Breed</label>
-                                                <input type="text" class="form-control" id="breed" name="breed" aria-describedby="emailHelp" placeholder="Enter breed" value="<?php  echo $row['Breed'];?>" required="true">
+                                                <label for="exampleInputEmail1">Giống loài</label>
+                                                <input type="text" class="form-control" id="breed" name="breed" aria-describedby="emailHelp" placeholder="Nhập giống loài" value="<?php  echo $row['Breed'];?>" required="true">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Description</label>
-                                                <input type="text" class="form-control" id="desc" name="desc" aria-describedby="emailHelp" placeholder="Enter Description of animal" value="<?php  echo $row['Description'];?>" required="true">
+                                                <label for="exampleInputEmail1">Mô tả</label>
+                                                <input type="text" class="form-control" id="desc" name="desc" aria-describedby="emailHelp" placeholder="Nhập mô tả động vật" value="<?php  echo $row['Description'];?>" required="true">
                                             </div>
                                             <?php } ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Update</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Cập nhập</button>
                                         </form>
                                     </div>
                                 </div>

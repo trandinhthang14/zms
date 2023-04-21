@@ -7,7 +7,7 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Zoo Management System | Home Page</title>
+<title>Hệ thống quản lý vườn thú | Trang chủ</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -20,7 +20,7 @@ include('includes/dbconnection.php');
 			
 		<div class="banner-header">
 			<div class="container">
-				<h2>contact</h2>
+				<h2>Liên hệ</h2>
 			</div>
 			</div>
 	<!--about-->
@@ -39,11 +39,11 @@ include('includes/dbconnection.php');
 						<div class="advantages-grids">
 							<div class="col-md-12 advantage-grid">
 								<div class="company_ad">
-							<h3>Contact Info</h3>
-							 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit velit justo.</p>
+							<h3>Thông tin liên hệ</h3>
+							 <p> </p>
 			      			<address>
 	 							 <p>Email : <?php  echo $row['Email'];?></p>
-								 <p>Phone : <?php  echo $row['MobileNumber'];?></p>
+								 <p>Số điện thoại : <?php  echo $row['MobileNumber'];?></p>
 								 <p><?php  echo $row['PageDescription'];?></p>
 								
 							</address>

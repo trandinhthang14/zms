@@ -15,10 +15,10 @@ $row=mysqli_fetch_array($query);
 if($row>0){
 $ret=mysqli_query($con,"update tbladmin set Password='$newpassword' where ID='$adminid'");
 
-echo '<script>alert("Your password successully changed")</script>';
+echo '<script>alert("Mật khẩu của bạn thay đổi thành công")</script>';
 } else {
 
-echo '<script>alert("YYour current password is wrong")</script>';
+echo '<script>alert("Mật khẩu hiện tại của bạn không chính xác")</script>';
 }
 
 
@@ -34,7 +34,7 @@ echo '<script>alert("YYour current password is wrong")</script>';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Change Password - Zoo Management System</title>
+    <title>Thay đổi mật khẩu - Hệ thống quản lý sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -91,31 +91,31 @@ return true;
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Change Password</h4>
+                                        <h4 class="header-title">Thay đổi mật khẩu</h4>
 
 
    
                                         <form method="post" action="" name="changepassword" onsubmit="return checkpass();">
                                              <div class="form-group">
 
-                                                <input type="password" class="form-control" id="currentpassword" name="currentpassword" aria-describedby="emailHelp" placeholder="Current Password" value="" required="true">
+                                                <input type="password" class="form-control" id="currentpassword" name="currentpassword" aria-describedby="emailHelp" placeholder="Mật khẩu hiện tại" value="" required="true">
                                                 
                                             </div>
  <div class="form-group">
 
                                                
-                                                <input type="password" class="form-control" id="newpassword" name="newpassword" aria-describedby="emailHelp" placeholder="New Password" value="" required="true">
+                                                <input type="password" class="form-control" id="newpassword" name="newpassword" aria-describedby="emailHelp" placeholder="Mật khẩu mới" value="" required="true">
                                                 
                                             </div>
                                              <div class="form-group">
 
                                                
-                                                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" aria-describedby="emailHelp" placeholder="Confirm Password" value="" required="true">
+                                                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" aria-describedby="emailHelp" placeholder="Xác nhận mật khẩu" value="" required="true">
                                                 
                                             </div>
 
                                           
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Change</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Thay đổi</button>
                                         </form>
                                     </div>
                                 </div>

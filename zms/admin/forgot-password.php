@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Forgot - Park Ticketing Management System</title>
+    <title>Quên - Hệ thống quản lý vé công viên</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -63,17 +63,17 @@ if(isset($_POST['submit']))
                 <form action="#" method="post" name="submit">
                    
                     <div class="login-form-head">
-                        <h4>Forgot Password</h4>
-                        <p>Hello there, Recover your Password</p>
+                        <h4>Quên mật khẩu</h4>
+                        <p>Xin chào, Khôi phục mật khẩu của bạn</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="exampleInputEmail1">Email Address</label>
+                            <label for="exampleInputEmail1">Địa chỉ email</label>
                             <input type="email" id="email" name="email" required="true">
                             <i class="ti-email"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Mobile Number</label>
+                            <label for="exampleInputPassword1">Số điện thoại di động</label>
                             <input type="text" id="contactno" name="contactno" required="true">
                             <i class="ti-lock"></i>
                         </div>
@@ -82,7 +82,7 @@ if(isset($_POST['submit']))
                                 
                             </div>
                             <div class="col-6 text-right">
-                                <a href="index.php">Signin</a>
+                                <a href="index.php">Đăng nhập</a>
                             </div>
                         </div>
                         <div class="submit-btn-area">

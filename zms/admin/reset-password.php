@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
         $query=mysqli_query($con,"update tbladmin set Password='$password'  where  Email='$email' && MobileNumber='$contactno' ");
    if($query)
    {
-echo "<script>alert('Password successfully changed');</script>";
+echo "<script>alert('Mật khẩu đã thay đổi thành công');</script>";
 session_destroy();
    }
   
@@ -26,7 +26,7 @@ session_destroy();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Reset Password - Park Ticketing Management System</title>
+    <title>Đặt lại mật khẩu - Hệ thống quản lý vé vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -74,17 +74,17 @@ return true;
             <div class="login-box ptb--100">
                 <form action="" method="post" name="changepassword" onsubmit="return checkpass();">
                              <div class="login-form-head">
-                        <h4>Reset Password</h4>
-                        <p>Hello there, Reset Your Password</p>
+                        <h4>Đặt lại mật khẩu</h4>
+                        <p>Xin chào, Đặt lại mật khẩu của bạn</p>
                     </div>
                     <div class="login-form-body">
                          <div class="form-gp">
-                            <label for="exampleInputPassword1">New Password</label>
+                            <label for="exampleInputPassword1">Mật khẩu mới</label>
                             <input type="password" id="password" name="newpassword" required="true">
                             <i class="ti-lock"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Confirm Password</label>
+                            <label for="exampleInputPassword1">Xác nhận mật khẩu</label>
                             <input type="password" id="password" name="confirmpassword" required="true">
                             <i class="ti-lock"></i>
                         </div>
@@ -93,7 +93,7 @@ return true;
                                 
                             </div>
                             <div class="col-6 text-right">
-                                <a href="index.php">Signin</a>
+                                <a href="index.php">Đăng nhập</a>
                             </div>
                         </div>
                         <div class="submit-btn-area">

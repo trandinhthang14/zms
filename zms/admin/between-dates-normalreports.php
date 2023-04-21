@@ -14,7 +14,7 @@ if (strlen($_SESSION['zmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Between Dates Report of Ticket Generating - Zoo Management System</title>
+    <title>Báo cáo tạo vé - Hệ thống quản lý vé sở thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -59,21 +59,21 @@ if (strlen($_SESSION['zmsaid']==0)) {
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title" style="color: blue">Between Dates Reports of Ticket Generating</h4>
+                                        <h4 class="header-title" style="color: blue">Báo cáo về việc tạo vé giữa các ngày</h4>
 
 
                                         <form method="post" name="bwdatesreport" action="normal-bwdates-reports-details.php">
                                              <div class="form-group">
-                                                <label>From Date</label>
+                                                <label>Từ ngày</label>
                                                 <input type="date" id="fromdate" name="fromdate" value="" class="form-control" required="true"></div>
                                             
                                          <div class="form-group">
-                                                <label>To Date</label>
+                                                <label>Đến ngày</label>
                                                <input type="date" id="todate" name="todate" value="" class="form-control" required="true">
                                                 
                                             </div>
                                           
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Submit</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Xác nhận</button>
                                         </form>
                                     </div>
                                 </div>

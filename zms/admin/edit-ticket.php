@@ -14,12 +14,12 @@ if(isset($_POST['submit']))
     $query=mysqli_query($con, "update tbltickettype set TicketType='$tpype',Price='$tprice' where ID='$tid'");
     if ($query) {
   
-    echo '<script>alert("Ticket detail has been Updated.")</script>';
+    echo '<script>alert("Chi tiết vé đã được cập nhật.")</script>';
   }
   else
     {
       
-      echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+      echo '<script>alert("Đã xảy ra sự cố. Vui lòng thử lại.")</script>';
     }
 
   
@@ -34,7 +34,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Update Ticket Type- Zoo Management System</title>
+    <title>Cập nhật loại vé- Hệ thống quản lý vườn thú</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -79,7 +79,7 @@ if(isset($_POST['submit']))
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Update Ticket Type</h4>
+                                        <h4 class="header-title">Cập nhật loại vé</h4>
 
 
                                         <form method="post" action="" name="">
@@ -91,18 +91,18 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Ticket Type</label>
+                                                <label for="exampleInputEmail1">Loại vé</label>
                                                 <input type="text" class="form-control" id="tickettype" name="tickettype" aria-describedby="emailHelp" value="<?php  echo $row['TicketType'];?>" required="true" readonly>
                                             </div>
                                          <div class="form-group">
-                                                <label for="exampleInputEmail1">Ticket Cost</label>
+                                                <label for="exampleInputEmail1">Giá vé</label>
                                                 <input type="text" class="form-control" id="tprice" name="tprice" aria-describedby="emailHelp" value="<?php  echo $row['Price'];?>" required="true">
                                                 
                                             </div>
                                             
 
                                       <?php } ?>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Update</button>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Cập nhập</button>
                                         </form>
                                     </div>
                                 </div>
